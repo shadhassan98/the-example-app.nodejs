@@ -16,7 +16,7 @@ spec:
     spec: 
       containers: 
         - 
-          image: shadhassan98/the-example-app.nodejs:firsttry
+          image: shadhassan98/end2end-dockernew
           name: node
           ports: 
             - 
