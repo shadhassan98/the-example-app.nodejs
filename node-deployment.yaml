@@ -1,11 +1,11 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata: 
   labels: 
     app: node
   name: node-deployment
 spec: 
-  replicas: 3
+  replicas: 1
   selector: 
     matchLabels: 
       app: node
@@ -21,3 +21,5 @@ spec:
           ports: 
             - 
               containerPort: 80
+      imagePullSecrets:
+      - name: $KUBERNETES_SECRET_NAME
